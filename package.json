@@ -3,7 +3,7 @@
   "publisher": "sn-corp",
   "displayName": "ButtonBuddy",
   "description": "ButtonBuddy is an intuitive Visual Studio Code extension designed for developers who prefer a more visual approach to coding.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.86.0"
   },
