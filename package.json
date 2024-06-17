@@ -3,25 +3,34 @@
   "publisher": "sn-corp",
   "displayName": "ButtonBuddy",
   "description": "ButtonBuddy is an intuitive Visual Studio Code extension designed for developers who prefer a more visual approach to coding.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.86.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:buttonbuddy.undo",
-    "onCommand:buttonbuddy.redo",
-    "onCommand:buttonbuddy.comment",
-    "onCommand:buttonbuddy.build",
-    "onCommand:buttonbuddy.debug"
-  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "buttonbuddy.undo",
+        "command": "workbench.view.search",
+        "title": "Search",
+        "icon": {
+          "light": "icons/search.png",
+          "dark": "icons/search.png"
+        }
+      },
+      {
+        "command": "references-view.findReferences",
+        "title": "References",
+        "icon": {
+          "light": "icons/references.png",
+          "dark": "icons/references.png"
+        }
+      },
+      {
+        "command": "undo",
         "title": "Undo",
         "icon": {
           "light": "icons/undo.png",
@@ -29,7 +38,7 @@
         }
       },
       {
-        "command": "buttonbuddy.redo",
+        "command": "redo",
         "title": "Redo",
         "icon": {
           "light": "icons/redo.png",
@@ -37,7 +46,7 @@
         }
       },
       {
-        "command": "buttonbuddy.comment",
+        "command": "editor.action.commentLine",
         "title": "Comment",
         "icon": {
           "light": "icons/comment.png",
@@ -45,7 +54,7 @@
         }
       },
       {
-        "command": "buttonbuddy.build",
+        "command": "workbench.action.tasks.build",
         "title": "Build",
         "icon": {
           "light": "icons/build.png",
@@ -53,7 +62,7 @@
         }
       },
       {
-        "command": "buttonbuddy.debug",
+        "command": "workbench.action.debug.start",
         "title": "Debug",
         "icon": {
           "light": "icons/debug.png",
@@ -68,24 +77,32 @@
     "menus": {
       "editor/title": [
         {
-          "command": "buttonbuddy.undo",
+          "command": "workbench.view.search",
           "group": "navigation@1"
         },
         {
-          "command": "buttonbuddy.redo",
+          "command": "references-view.findReferences",
           "group": "navigation@2"
         },
         {
-          "command": "buttonbuddy.comment",
+          "command": "editor.action.commentLine",
           "group": "navigation@3"
         },
         {
-          "command": "buttonbuddy.build",
+          "command": "workbench.action.tasks.build",
           "group": "navigation@4"
         },
         {
-          "command": "buttonbuddy.debug",
+          "command": "workbench.action.debug.start",
           "group": "navigation@5"
+        },
+        {
+          "command": "undo",
+          "group": "navigation@6"
+        },
+        {
+          "command": "redo",
+          "group": "navigation@7"
         }
       ],
       "editor/context": [
